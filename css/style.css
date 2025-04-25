@@ -8,38 +8,38 @@ rounded:
 }
 */
 
-/* デフォルトのスタイル */
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* タブレット(iPad)用のスタイル */
+/* iPadやタブレット（最大1024px）のスタイル調整 */
 @media (max-width: 1024px) {
   body {
-    font-size: 14px;
-    margin: 0 10px;  /* 余白を調整 */
+    font-size: 14px; /* 文字サイズを少し小さく */
+    margin: 10px;    /* 余白を調整 */
   }
 
-  /* 図形や要素をフル幅に変更 */
+  /* 画像や図形が崩れないように調整 */
   .your-element-class {
     width: 100%;
     max-width: 100%;
     height: auto;
   }
 
-  /* さらに細かい設定 */
+  /* Flexboxでレイアウト調整 */
   .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* 縦並びに */
+    align-items: center;    /* 中央揃え */
   }
 
+  /* アイテムの幅を調整 */
   .container > div {
-    flex: 1 1 100%;
-    margin: 5px;
+    width: 100%;
+    max-width: 100%;
+    margin: 5px 0;  /* アイテム間に少しスペースを追加 */
+  }
+
+  /* テキストの折り返しを強制する */
+  .text {
+    word-wrap: break-word;
+    white-space: normal;
   }
 }
 
