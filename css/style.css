@@ -8,16 +8,25 @@ rounded:
 }
 */
 
+/* PC用のデフォルトスタイル */
 body {
-	/* PC用の横幅を指定 */
-	min-width: 1080px;
+  font-size: 16px;
+  margin: 20px;
 }
-/* スマートフォンのブレイクポイント */
-@media screen and (max-width: 769px){
-	body {
-		/* 初期化 */
-		min-width: initial;
-	}
+
+/* iPad用のスタイル（画面幅768px以下のデバイスに適用） */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* 小さくしてみる */
+    margin: 10px;    /* 余白を調整 */
+  }
+
+  /* 図形や折り返しが崩れないように調整 */
+  .your-element-class {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .ja {
