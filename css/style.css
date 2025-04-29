@@ -1,0 +1,338 @@
+
+/*
+rounded:
+.name {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+/* 端末用 */
+body {
+  width: 1920px;
+  height: 1080px;
+  overflow: auto;
+}
+
+
+
+.ja {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.en-reg {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .en-bo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+/* スクロールを滑らかに */
+  html { scroll-behavior: smooth;}
+
+/* スクロール位置調整 */
+section.anchor {
+  display: block;
+  padding-top: 15vh;
+  margin-top: -15vh;
+}
+
+/* ロゴ用 */
+ .circle img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;  /* 円形にする */
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mar {
+  padding: 0 10px;
+  width: 185px;
+  height: 50px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 40px;
+  display: table-cell;
+}
+
+/* ヘッダー */
+header {
+  padding: 27px 0;
+  position: sticky; /* ついてくるように */
+  top: 0;
+  background-color: #ffffff;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+
+.header-menu li {
+  margin-left: 40px;
+}
+
+.header-menu li a {
+  color: #000;
+  transition: .3s;
+}
+
+.header-menu li a:hover {
+  color: #83d29b;
+  transition: .3s;
+}
+
+/* メイン */
+main {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h5 {
+  font-size: 700%;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.smp-img img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* how-to-use */
+
+#how-to-use {
+  margin-top: 100px;
+}
+
+.title {
+  color: black;
+  font-weight: 500;
+  font-size: 55px;
+  font-family: "Poppins", sans-serif;
+}
+
+.sub-title {
+  color: #83d29b;
+  font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.circle-bg {
+  margin-left: 30px;
+  background-color: #83d29b;
+  color: #ffffff;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 0;
+  border-radius: 50%;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.circle-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.dot-1 {
+  width: 75px;
+  height: 200px;
+  border-right: 20px dotted #83d29b;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.dot-2 {
+  width: 75px;
+  height: 100px;
+  border-right: 20px dotted #83d29b;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.dot-3 {
+  width: 75px;
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.details {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  width: 990px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+
+.marg {
+  margin-top: 70px;
+}
+
+.topmarg {
+  margin-bottom: 100px;
+}
+
+.marg-txt {
+  margin-top: 60px;
+}
+
+.marg-1 {
+  margin-right: 500px;
+}
+
+.marg-2 {
+  margin-right: 450px;
+}
+
+.marg-3 {
+  margin-right: 535px;
+}
+
+/* members */
+.member {
+  box-shadow:
+    0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0 5px 6.1px rgba(0, 0, 0, 0.076),
+    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+    0 101px 74px rgba(0, 0, 0, 0.13);
+  height: 550px;
+  width: 350px;
+  background-color: #83d29b;
+  border-radius: 15px;
+}
+
+/* 拡大用 */
+.zoom {
+  transition: transform .6s ease;/* ゆっくり変化させる */
+}
+.zoom:hover {
+  transform: scale(1.1);/* 拡大 */
+}
+
+.icon img {
+  width: 200px;
+ height: 200px;
+ border-radius: 50%;  /* 円形にする */
+ margin-left: 75px;
+ border: double 4px#ffffff;
+ padding: 10px;
+}
+
+section h3.member-text {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+}
+
+section.member p {
+  font-size: 15px;
+  text-align: left;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  padding: 0px 10px;
+  padding-top: 70px;
+}
+
+/* Information */
+section#info h5 {
+  color: #000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+}
+
+section.info-data {
+  background-color: #83d29b;
+  border-radius: 15px;
+  margin-top: 30px;
+  padding: 15px 15px;
+}
+
+h6.info-title {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 55px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h6.info-subtitle {
+  color: #6c8c75;
+  font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+p.details-white {
+  font-size: 15px;
+  text-align: left;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  line-height: 2;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #83d29b;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  padding: 20px 20px;
+}
+
+footer p {
+  text-align: center;
+}
