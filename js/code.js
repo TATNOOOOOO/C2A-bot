@@ -12,22 +12,23 @@ $(function(){
 
   function applyScale() {
     const screenWidth = window.innerWidth;
-    console.log('Current screen width:', screenWidth); // ここで確認
     const targetWidth = 1920;
     let scaleFactor = screenWidth / targetWidth;
   
-    console.log('Scale factor:', scaleFactor); // これも確認
-  
+    // スケーリングを適用（縮小時のみ）
     if (scaleFactor < 1) {
       document.body.style.transform = `scale(${scaleFactor})`;
       document.body.style.transformOrigin = 'top left';
-      document.body.style.width = `${targetWidth}px`;
+      document.body.style.width = `${targetWidth}px`;  // 横幅をターゲットに合わせる
     } else {
-      document.body.style.transform = '';
+      document.body.style.transform = '';  // 拡大しない
       document.body.style.transformOrigin = '';
       document.body.style.width = '';
     }
   }
+  
+  window.addEventListener('load', applyScale);  // ページ読み込み後にスケーリング
+  window.addEventListener('resize', applyScale);  // 画面リサイズ時にも適用
   
   window.addEventListener('load', applyScale);
   window.addEventListener('resize', applyScale);
