@@ -11,16 +11,18 @@ $(function(){
   let targetWidth = 1920;
 
   function applyScale() {
-    let screenWidth = window.innerWidth;
+    const screenWidth = window.innerWidth;
+    console.log('Current screen width:', screenWidth); // ここで確認
+    const targetWidth = 1920;
     let scaleFactor = screenWidth / targetWidth;
   
-    // PCより小さいときだけ縮小
+    console.log('Scale factor:', scaleFactor); // これも確認
+  
     if (scaleFactor < 1) {
       document.body.style.transform = `scale(${scaleFactor})`;
       document.body.style.transformOrigin = 'top left';
-      document.body.style.width = `${targetWidth}px`; // レイアウト崩れ防止
+      document.body.style.width = `${targetWidth}px`;
     } else {
-      // PCは等倍表示（拡大しない）
       document.body.style.transform = '';
       document.body.style.transformOrigin = '';
       document.body.style.width = '';
