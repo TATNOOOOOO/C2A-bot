@@ -7,7 +7,8 @@ $(function(){
     console.log("Recommanded");
     }
   });
-  
+
+let targetWidth = 1920;
 function applyScale() {
   const screenWidth = window.innerWidth;
   let scaleFactor = screenWidth / screenWidth; // 自分の画面幅に基づいてスケール
