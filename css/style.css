@@ -10,10 +10,11 @@ rounded:
 
 /* 端末用 */
 body {
-  width: 1920px;
-  height: 1080px;
-  overflow: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 横スクロール防止 */
 }
+
 
 
 
