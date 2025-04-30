@@ -10,15 +10,16 @@ rounded:
 
 /* 端末用 */
 html, body {
-  height: 100%;  /* ビューポートの高さを100%に設定 */
+  height: 100%; /* ビューポートの高さに合わせる */
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* 横スクロール防止 */
-  overflow-y: auto;  /* 縦スクロールは有効に */
 }
 
 body {
-  transform-origin: top left;  /* スケーリングの原点を左上に */
+  transform-origin: top left; /* スケーリングの基準点を左上に */
+  height: auto; /* 高さを自動に設定 */
+  width: 100%; /* 幅を100%に設定 */
 }
 
 .ja {
