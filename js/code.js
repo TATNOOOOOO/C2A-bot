@@ -11,23 +11,18 @@ $(function(){
 let targetWidth = 1920;
 function applyScale() {
   const screenWidth = window.innerWidth;
-  const targetWidth = 1920;
-  const scaleFactor = screenWidth / targetWidth;
+  const baseWidth = 1920; // PCで設計した幅
+  const scale = screenWidth / baseWidth;
 
-  console.log("scaleFactor:", scaleFactor); // 動作確認用ログ
+  document.body.style.transform = `scale(${scale})`;
+  document.body.style.transformOrigin = 'top left';
 
-  if (scaleFactor < 1) {
-    document.body.style.transform = `scale(${scaleFactor})`;
-    document.body.style.transformOrigin = 'top left';
-    document.body.style.width = `${100 / scaleFactor}%`; // 白い余白対策
-  } else {
-    document.body.style.transform = '';
-    document.body.style.transformOrigin = '';
-    document.body.style.width = '';
-  }
+  // スケールに合わせて、body のサイズを逆補正
+  document.body.style.width = `${100 / scale}vw`;
+  document.body.style.height = `${100 / scale}vh`;
+  document.documentElement.style.overflowX = 'hidden'; // 横スクロール抑制
 }
 
-window.addEventListener('load', applyScale);
+applyScale();
 window.addEventListener('resize', applyScale);
-
 
