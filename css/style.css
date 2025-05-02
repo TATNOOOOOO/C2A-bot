@@ -8,15 +8,6 @@ rounded:
 }
 */
 
-/* 端末用 */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-
 .ja {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -335,4 +326,12 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* 端末用 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
