@@ -60,4 +60,3 @@ $(function () {
   
   applyScale();
   window.addEventListener('resize', applyScale);
-  
