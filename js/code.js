@@ -1,12 +1,11 @@
-$(function () {
+$(function(){
   var ua = navigator.userAgent;
-  var platform = navigator.platform;
 
   // スマホ判定（iPhone または Android の Mobile）
   var isMobile = /iPhone|Android.*Mobile/.test(ua);
 
   // タブレット判定（iPad または Android タブレット（Mobile なし））
-  var isTablet = /iPad/.test(ua) || (platform === "iPad") || (/Macintosh/.test(ua) && 'ontouchend' in document);
+  var isTablet = /iPad|Android(?!.*Mobile)/.test(ua);
 
   if (isMobile) {
     console.log("Mobile: Not recommended");
@@ -19,7 +18,6 @@ $(function () {
     // PC は何もしない
   }
 });
-
 
 $(function () {
   function checkScroll() {
