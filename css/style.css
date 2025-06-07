@@ -234,14 +234,6 @@ h5 {
   border-radius: 15px;
 }
 
-/* 拡大用 */
-.zoom {
-  transition: transform .6s ease;/* ゆっくり変化させる */
-}
-.zoom:hover {
-  transform: scale(1.1);/* 拡大 */
-}
-
 .icon img {
   width: 200px;
  height: 200px;
@@ -289,24 +281,33 @@ section.info-data {
   background-color: #83d29b;
   border-radius: 15px;
   margin-top: 30px;
-  padding: 15px 15px;
+  padding: 40px 60px;
+  box-shadow:
+    0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0 5px 6.1px rgba(0, 0, 0, 0.076),
+    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+    0 101px 74px rgba(0, 0, 0, 0.13);
 }
 
 h6.info-title {
   color: #ffffff;
   font-weight: 500;
-  font-size: 55px;
+  font-size: 40px;
   font-family: "Noto Sans JP", sans-serif;
 }
 
 h6.info-subtitle {
   color: #6c8c75;
   font-weight: 700;
+  font-size: 20px;
   font-family: "Noto Sans JP", sans-serif;
+  text-align: right;
 }
 
 p.details-white {
-  font-size: 15px;
+  font-size: 18px;
   text-align: left;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
@@ -403,4 +404,12 @@ body {
 .fd.down.scrollin {
   opacity: 1;
   transform: translate(0,0);
+}
+
+/* 拡大用 */
+.zoom {
+  transition: transform .6s ease;/* ゆっくり変化させる */
+}
+.zoom:hover {
+  transform: scale(1.1);/* 拡大 */
 }
