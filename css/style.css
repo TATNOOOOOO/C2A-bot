@@ -241,7 +241,7 @@ h5 {
   background-image: linear-gradient(to right, magenta, yellow, cyan, magenta, yellow, cyan);
   background-size: 200% auto;
   background-position: 0% center;
-  animation: rainbow-shift 0.016s linear infinite;
+  animation: rainbow-shift 0.02s linear infinite;
   border-radius: 15px;
 }
 
