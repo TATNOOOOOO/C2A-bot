@@ -238,7 +238,8 @@ h5 {
 .member-y {
   height: 550px;
   width: 350px;
-  background-color: #a9a9a9;
+  background-color: linear-gradient(to right, Magenta, yellow, Cyan, Magenta) 0% center/200%;
+  animation: gaming 2s linear infinite;
   border-radius: 15px;
 }
 
