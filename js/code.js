@@ -40,3 +40,26 @@ $(function () {
   // 1秒ごとに判定を繰り返す（1000ミリ秒）
   setInterval(checkScroll, 1000);
 });
+
+let targetWidth = 1920;
+  function applyScale() {
+    const screenWidth = window.innerWidth;
+    const baseWidth = 1920; // PCで設計した幅
+    const scale = screenWidth / baseWidth;
+  
+    document.body.style.transform = `scale(${scale})`;
+    document.body.style.transformOrigin = 'top left';
+  
+    // スケールに合わせて、body のサイズを逆補正
+    document.body.style.width = `${100 / scale}vw`;
+    document.body.style.height = `${100 / scale}vh`;
+    document.documentElement.style.overflowX = 'hidden'; // 横スクロール抑制
+  }
+  
+  applyScale();
+  window.addEventListener('resize', applyScale);
+  
+  let closebutton = document.getElementById('closebtn');
+closebutton.addEventListener('click', () => {
+    newwin.close();
+});
